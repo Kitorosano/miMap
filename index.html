@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; 
+	img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; 
+	style-src  'self' 'unsafe-inline' *">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- The API -->
+	<link rel="stylesheet" href="css/leaflet.css">
+
+	<title>miMap</title>
+
+	<style>
+		#miMapid {
+			width: 1200px;
+			margin-left: 77px;
+			height: 525px;
+			/*480px;
+			/*SIZE OF THE MAP*/
+		}
+
+		#header {
+			padding: 1px;
+			color: rgb(49, 57, 77);
+			font-size: 30px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<header>
+			
+		</header>
+	</div>
+	<div id="miMapid"></div> <!-- MAP CONTAINER -->
+
+
+
+
+
+
+
+
+
+
+	<div class="container" hidden>
+		<br>
+		<input id="input" size="100" placeholder="Put the description of the marker here">
+		<button id="btn btn-primary">Submit</button>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+
+	<script src="js/leaflet.js"></script>
+	<script src="js/sketch.js"></script>
+</body>
+
+</html>
