@@ -1,0 +1,74 @@
+#miMapid {
+    width: 100%;
+    /* margin-top: 10px;
+    margin-left: 77px; */
+    height: 562px;
+    /*480px;
+    /*SIZE OF THE MAP*/
+}
+
+.titulo-mM {
+    font-size: 30px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(4, 136, 22);
+}
+
+.subtitulo-mM{
+    font-family: 'Arial Narrow';
+    
+    color: rgb(1, 83, 1);
+    font-size: 25px;
+}
+
+.barraTop-mM {
+    padding: 0%;
+    background-color: rgb(163, 180, 4);
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+    margin-top: 100px;
+}
+
+.card-mM {
+    background-color: rgba(128, 128, 128, 0.95);
+}
+.card-header {
+    font-size: 25px;
+    color: rgb(8, 255, 41);
+}
+
+.card-body  {
+
+    font-size: 17px;
+    color: aliceblue;
+}
+
+.thumb {
+    width:30px;
+    margin-top: 10px;
+}
+
+.table-mM {
+    
+    width: 300px;
+   font-size: 12px;
+}
+
+.card-body a {
+    color: aliceblue;
+}
+
+.localInfo-Header-mM {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

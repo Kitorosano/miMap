@@ -9,47 +9,156 @@
 	img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; 
 	style-src  'self' 'unsafe-inline' *">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-	<!-- The API -->
+	<!-- Importing CSS libraries -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/leaflet.css">
+	<link rel="stylesheet" href="css/estilos.css">
 
 	<title>miMap</title>
 
-	<style>
-		#miMapid {
-			width: 1200px;
-			margin-left: 77px;
-			height: 525px;
-			/*480px;
-			/*SIZE OF THE MAP*/
-		}
-
-		#header {
-			padding: 1px;
-			color: rgb(49, 57, 77);
-			font-size: 30px;
-		}
-	</style>
 </head>
 
 <body>
 
-	<div class="container-fluid">
-		<header>
-			
-		</header>
-	</div>
-	<div id="miMapid"></div> <!-- MAP CONTAINER -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-static-top barraTop-mM" role="navigation">
+
+			<div class="container">
+				<div class="row">
+					<div class=" col-md-4 navbar-header">
+						<span class="navbar-brand mb-0 h1 titulo-mM">miMap</span>
+					</div>
+
+					<div class="col-md-6"></div>
+					<div class="col-md-2">
+						<span class="navbar-brand mb-0 h2 subtitulo-mM">Mostrandote lo que vos necesitas</span>
+					</div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegacion-mM">
+						<span class="sr-only">Desplegar / Ocultar Menu</span>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+
+		</nav>
+	</header>
+
+	<section>
+		<div id="miMapid"
+			class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
+
+			<div class="leaflet-control-container">
+				<div class="leaflet-top leaflet-left"></div>
+				<div class="leaflet-top leaflet-right">
+					<div class="card card-mM leaflet-control collapse" id="localInfo">
+						<div class="card-header leaflet-control localInfo-Header-mM">
+							<span>
+								<!-- <svg style="border-radius: 100%" width="80" height="80"
+									xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+									focusable="false" role="img">
+									<rect width="100%" height="100%" fill="#868e96"></rect>
+									<text x="5%" y="50%" fill="#dee2e6" dy=".3em" style="font-size: 10px">Imagen de Local</text> -->
+								<img style="border-radius: 100%" id="localImage" src="" alt="">
+								</svg>
+							</span>
+							<span id="localName"></span>
+							<span style="font-size: 120%; color: white">></span>
+							<span id="localType"></span>
+						</div>
+						<div class="card-body leaflet-control localInfo-Header-mM">
+							<ul style="margin-bottom: 0%" class="my-auto list-unstyled">
+								<li class="direccion">
+									<span></span>Direccion: <span id="localDireccion"></span>
+								</li>
+								<li class="horarios">
+									<span></span>Horarios
+									<a href="#table" class="dropdown-toggle" data-toggle="collapse" role="button">
+									</a>
+									<div class="collapse" id="table">
+										<div class="table-responsive">
+											<table
+												class="table table-secondary table-sm table-striped table-mM ml-auto">
+												<tr>
+													<th style="font-size: 14px">Lunes:</th>
+													<td id="Lm">Cerrado</td>
+													<td id="Lt"></td>
+												</tr>
+												<tr>
+													<th style="font-size: 14px">Martes:</th>
+													<td id="Mm">Cerrado</td>
+													<td id="Mt"></td>
+												</tr>
+												<tr>
+													<th style="font-size: 14px">Miercoles:</th>
+													<td id="Mim">Cerrado</td>
+													<td id="Mit"></td>
+												</tr>
+												<tr>
+													<th style="font-size: 14px">Jueves:</th>
+													<td id="Jm">Cerrado</td>
+													<td id="Jt"></td>
+												</tr>
+												<tr>
+													<th style="font-size: 14px">Viernes:</th>
+													<td id="Vm">Cerrado</td>
+													<td id="Vt"></td>
+												</tr>
+												<tr>
+													<th style="font-size: 14px">Sabado:</th>
+													<td id="Sm">Cerrado</td>
+													<td id="St"></td>
+												</tr>
+												<tr>
+													<th style="font-size: 14px">Domingo:</th>
+													<td id="Dm">Cerrado</td>
+													<td id="Dt"></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</li>
+								<li class="Contacto">
+									<span></span><span>Contacto: </span><span id="localContact">4724 2449</span>
+								</li>
+								<li class="Redes">
+									<span></span><span>Redes: </span>
+									<span id="facebook">
+										<a href="#F">
+											<img src="Icons/Facebook.png" alt="" class="thumb">
+										</a>
+									</span>
+									<span>
+										<a href="#I">
+											<img src="Icons/Instagram.png" alt="" class="thumb">
+										</a>
+									</span>
+								</li>
+							</ul>
+							<br>
+
+						</div>
+					</div>
+				</div>
+				<div class="leaflet-bottom leaflet-left"></div>
+				<div class="leaflet-bottom leaflet-right"></div>
+			</div>
+		</div> <!-- MAP CONTAINER -->
+	</section>
 
 
 
-
-
-
-
+	<footer>
+		<nav class="navbar-expand-lg navbar-static-top bg-success" role="navigation">
+			<div class="d-flex bd-highlight">
+				<div class="mr-auto my-auto">
+					<span class="mb-0 h2" style="font-size: 20px">Paysandú</span>
+				</div>
+				<div class="pr-2 my-auto mb-0">
+					<p class="text-secondary">Contactenos: mimappay@gmail.com</p>
+				</div>
+			</div>
+		</nav>
+	</footer>
 
 
 
@@ -59,16 +168,13 @@
 		<button id="btn btn-primary">Submit</button>
 	</div>
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
 
+
+	<!-- Importing JS Libriaries -->
+	<script src="js/jquery.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/leaflet.js"></script>
 	<script src="js/sketch.js"></script>
 </body>
