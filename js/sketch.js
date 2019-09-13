@@ -3,7 +3,7 @@ const attributions =
 	'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>, Esteban Rosano & Felipe Caillabet';
 const tileUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
 const tiles = L.tileLayer(tileUrl, { attributions, zoomControl: true, maxZoom: 20, minZoom: 15, id: 'mapbox.streets', accessToken: 'pk.eyJ1Ijoia2l0b3Jvc2FubyIsImEiOiJjang0dXN0Z3gwZHBxNDRrajl0eWJnbWV1In0._JKXocT10c_LMSNjiRUEZw' });
-const miMap = L.map('miMapid', { center: [-32.317074, -58.085594], zoom: 18, layers: [tiles] });
+const miMap = L.map('miMapid', { center: [-32.316900, -58.085500], zoom: 18, layers: [tiles] });
 
 miMap.zoomControl.setPosition('bottomright');
 
@@ -100,7 +100,7 @@ async function showIt() {
 			$('#localInfo').collapse('toggle');
 			if (hour) {
 				const result = parseHour(hour);
-				console.log(result);
+				// console.log(result);
 				for (dia of result) {
 					for (time of dia) {
 						document.getElementById(time.id).textContent = time.hora;
